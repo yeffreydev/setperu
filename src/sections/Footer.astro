@@ -1,7 +1,5 @@
 ---
-import Action from "@/components/Action.astro";
-import Icon from "@/components/Icon.astro";
-import type { FooterData, Icon as IconType } from "@/config/landing.interface";
+import type { FooterData } from "@/config/landing.interface";
 
 interface Props {
   data: FooterData;
@@ -10,37 +8,14 @@ interface Props {
 const { data } = Astro.props;
 ---
 
-<footer
-  class="flex flex-col justify-center text-center gap-y-8 pt-8 bg-black text-white w-full"
->
-  <section>
-    <Action as="a" type="text" class="text-xl md:text-2xl" href="/">
-      {data.logo}
-    </Action>
-  </section>
-  <section>
-    <p class="md:text-lg">
-      {data.description}
-    </p>
-  </section>
-  <section
-    class="flex flex-row flex-wrap justify-center gap-x-3 px-4 md:px-0 md:text-xl"
-  >
-    {
-      data.links.map((link) => (
-        <Action as="a" type="text" href={link.href}>
-          {link.label}
-        </Action>
-      ))
-    }
-  </section>
-  <section class="mb-5 flex flex-row flex-wrap justify-center gap-x-3">
-    {
-      data.socials.map((social) => (
-        <Action as="a" type="icon" href={social.href} title={social.icon}>
-          <Icon icon={social.icon as IconType} />
-        </Action>
-      ))
-    }
-  </section>
+<footer class="bg-gray-900 text-white py-6">
+  <div class="container mx-auto px-4 text-center">
+    <p class="mb-4">© 2025 Set Perú</p>
+    <div class="flex justify-center space-x-4">
+      <a href="#privacy" class="hover:text-orange-500"
+        >Políticas de privacidad</a
+      >
+      <a href="#terms" class="hover:text-orange-500">Términos</a>
+    </div>
+  </div>
 </footer>

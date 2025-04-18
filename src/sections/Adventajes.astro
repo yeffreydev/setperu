@@ -1,6 +1,4 @@
 ---
-import SectionTitle from "@/components/SectionTitle.astro";
-import SideBySide from "@/components/SideBySide.astro";
 import type { AdventajesData } from "@/config/landing.interface";
 
 interface Props {
@@ -10,15 +8,25 @@ interface Props {
 const { data } = Astro.props;
 ---
 
-<section id="adventajes-section" class="flex flex-col mb-20 gap-y-28">
-  <SectionTitle>
-    {data.title}
-  </SectionTitle>
-  <div>
-    {
-      data.adventajes.map((adventaje, idx) => (
-        <SideBySide data={adventaje} reversed={(idx + 1) % 2 === 0} />
-      ))
-    }
+<section class="bg-gray-100 py-16">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-6">
+      Potencia tu negocio con nuestros sistemas
+    </h2>
+    <p class="mb-4">
+      Our intuitive customization options empower you to create a website that
+      stands out and resonates with...
+    </p>
+    <ul class="list-disc list-inside mb-6">
+      <li>Our intuitive customization</li>
+      <li>Our intuitive customization</li>
+    </ul>
+    <h2 class="text-3xl font-bold mb-6">Incrementa tus potenciales clientes</h2>
+    <p class="mb-4">Nuestras landing pages, etc.</p>
+    <ul class="list-disc list-inside">
+      <li>Our intuitive customization</li>
+      <li>Our intuitive customization</li>
+      <li>Our intuitive customization</li>
+    </ul>
   </div>
 </section>

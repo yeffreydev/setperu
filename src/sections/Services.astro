@@ -1,42 +1,63 @@
 ---
-import Icon from "@/components/Icon.astro";
-import IconWrapper from "@/components/IconWrapper.astro";
-import SectionTitle from "@/components/SectionTitle.astro";
-import type {
-  Icon as IconType,
-  ServicesData,
-} from "@/config/landing.interface";
+import type { ServicesData } from "@/config/landing.interface";
 
 interface Props {
   data: ServicesData;
 }
 
+import checkListSvg from "@/assets/icons/checklist.svg";
+import codeSvg from "@/assets/icons/code.svg";
+import settingsSvg from "@/assets/icons/settings.svg";
+import worldSvg from "@/assets/icons/world.svg";
+
+const services = [
+  {
+    title: "Software a medida",
+    description:
+      "Vendemos nuestros mejores páginas web diseñada una landing page personalizada.",
+    icon: codeSvg.src,
+  },
+  {
+    title: "Landing Page Profesionales",
+    description:
+      "Tenemos las mejores herramientas para hacer crecer tus ingresos, etc.",
+    icon: worldSvg.src,
+  },
+  {
+    title: "Automatizar Procesos",
+    description: "Scripts, automatización, etc.",
+    icon: checkListSvg.src,
+  },
+  {
+    title: "Facil de empezar",
+    description:
+      "Diseños personalizados atractivos, creamos tu presencia online.",
+    icon: settingsSvg.src,
+  },
+];
+
 const { data } = Astro.props;
 ---
 
-<section id="services-section" class="flex flex-col mb-60 gap-y-28">
-  <SectionTitle>
-    {data.title}
-  </SectionTitle>
-  <div class="grid md:grid-cols-2 gap-y-10 justify-items-center">
-    {
-      data.services.map((service) => (
-        <article class="flex gap-x-6 md:gap-x-12 md:w-[550px]">
-          <div>
-            <IconWrapper>
-              <Icon icon={service.icon as IconType} />
-            </IconWrapper>
+<section class="py-16">
+  <div class="container flex flex-col mt-6 gap-5">
+    <h2 class="text-3xl font-semibold text-gray-700">
+      Todo lo que necesitas para tu negocio
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {
+        services.map((service) => (
+          <div class="flex gap-3 items-start bg-white p-6 py-10 px-5">
+            <img class="bg-blue-700 rounded-full p-3 " src={service.icon} />
+            <div class="flex flex-col gap-2">
+              <h3 class="text-xl font-semibold text-gray-600">
+                {service.title}
+              </h3>
+              <p class="w-10/12 text-gray-500">{service.description}</p>
+            </div>
           </div>
-          <section>
-            <h3 class="text-xl font-medium md:text-4xl mb-3">
-              {service.title}
-            </h3>
-            <p class="text-pretty opacity-90 md:text-lg">
-              {service.description}
-            </p>
-          </section>
-        </article>
-      ))
-    }
+        ))
+      }
+    </div>
   </div>
 </section>

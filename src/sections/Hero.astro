@@ -1,6 +1,4 @@
 ---
-import Action from "@/components/Action.astro";
-
 interface Props {
   data: {
     title: string;
@@ -12,62 +10,43 @@ interface Props {
 }
 
 const { data } = Astro.props;
+
+import heroImg from "@/assets/hero.png";
+import { Image } from "astro:assets";
 ---
 
-<section id="hero-section" class="flex justify-center mt-48 h-screen">
-  <div class="md:w-1/2">
-    <h1 class="text-4xl text-center font-semibold md:text-6xl">
-      {data.title}
-      <span class="text-primary"> {data.highlightedTitle} </span>
-    </h1>
-    <h2 class="mt-10 text-lg text-center opacity-80 md:text-2xl">
-      {data.subTitle}
-    </h2>
-    <div class="flex justify-evenly mt-10">
-      <Action
-        as="a"
-        type="button"
-        class="bg-black text-white"
-        href="https://github.com/JimmyCamus/luna-landing"
-        target="_blank"
+<section class="pt-20">
+  <div class="container flex">
+    <div class="flex flex-1 flex-col gap-5 justify-center items-start">
+      <h1 class="text-3xl font-semibold text-gray-800">
+        Creamos tecnología que potencia tu negocio y genera resultados.
+      </h1>
+      <p class="text-lg text-gray-500">Contáctanos para asesoría gratuita.</p>
+      <a
+        href="#contact"
+        class="bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 flex items-center gap-2"
       >
-        {data.primaryCta}
-      </Action>
-      <Action
-        as="a"
-        class="bg-transparent text-black border border-black"
-        type="button"
-        href="https://github.com/JimmyCamus/luna-landing"
-        target="_blank"
-      >
-        {data.secondaryCta}
-      </Action>
-    </div>
-    <div class="flex justify-center">
-      <Action
-        as="a"
-        class="flex justify-center items-center animate-bounce border-2 border-transparent bg-primary text-white rounded-full w-14 h-14 mt-32 hover:bg-white hover:text-primary hover:border-primary transition"
-        href="#services-section"
-        title="arrow down icon"
-      >
+        Contáctanos
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          stroke-width="2"
           stroke="currentColor"
-          class="w-8 h-8"
+          class="w-5 h-5"
         >
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
-            d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"></path>
+            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
         </svg>
-      </Action>
+      </a>
+    </div>
+    <div class="flex-1 mt-10">
+      <Image src={heroImg} alt="Workspace" class="mx-auto" />
     </div>
   </div>
 </section>
-
 <style>
   @keyframes fadeIn {
     from {
