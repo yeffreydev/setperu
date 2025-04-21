@@ -1,33 +1,61 @@
-<section id="contact" class="bg-black text-white py-16">
-  <div class="container mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-6">
-      ¿Dudas en como empezar? ¡No dudes en contactarnos!
-    </h2>
-    <form class="max-w-lg mx-auto space-y-4">
-      <input
-        type="text"
-        placeholder="Nombre completo"
-        class="w-full p-2 rounded"
-      />
-      <input
-        type="email"
-        placeholder="Correo electrónico"
-        class="w-full p-2 rounded"
-      />
-      <input type="tel" placeholder="Teléfono" class="w-full p-2 rounded" />
-      <input
-        type="text"
-        placeholder="Horario de recibir llamadas"
-        class="w-full p-2 rounded"
-      />
-      <textarea
-        placeholder="Escribe tu mensaje aquí"
-        class="w-full p-2 rounded h-24"></textarea>
-      <button
-        type="submit"
-        class="bg-orange-500 px-6 py-3 rounded-full hover:bg-orange-600"
-        >Contáctenos</button
-      >
-    </form>
+<section id="contact" class="bg-black text-white w-full py-10">
+  <div class="flex flex-col gap-4">
+    <h1 class="italic text-center">Set Perú</h1>
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">
+        ¿Dudas en como empezar?
+        <br />
+        ¡No dudes en contactarnos!
+      </h2>
+      <form class="mx-auto max-w-lg flex flex-col gap-5">
+        <div class="flex gap-5">
+          <input
+            type="text"
+            placeholder="Nombre completo"
+            class="w-full p-2 rounded bg-opacity-0 bg-black border border-white"
+          />
+          <input
+            type="email"
+            placeholder="Correo electrónico"
+            class="w-full p-2 rounded bg-opacity-0 bg-black border border-white"
+          />
+        </div>
+        <div class="flex gap-5">
+          <input
+            type="tel"
+            placeholder="Teléfono"
+            class="w-full p-2 rounded bg-opacity-0 bg-black border border-white"
+          />
+          <input
+            type="text"
+            placeholder="Horario de recibir llamadas"
+            class="w-full p-2 rounded bg-opacity-0 bg-black border border-white"
+          />
+        </div>
+        <textarea
+          placeholder="Escribe tu mensaje aquí"
+          class="w-full p-2 rounded h-24 bg-opacity-0 bg-black border border-white"
+        ></textarea>
+        <button
+          type="submit"
+          class="bg-white flex items-center gap-2 mx-auto text-black px-10 py-3 rounded-full hover:bg-gray-500 hover:text-white transition duration-300"
+        >
+          <span> Contáctenos</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            class="w-5 h-5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </button>
+      </form>
+    </div>
   </div>
 </section>

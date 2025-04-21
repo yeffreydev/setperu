@@ -1,15 +1,15 @@
 {
   "meta": {
-    "title": "Luna Landing your perfect landing page",
-    "description": "Landing page template",
-    "lang": "en",
+    "title": "SetPeru - Desarrollo web y aplicaciones ",
+    "description": "SetPeru desarolla aplicaciones web y móviles, así como soluciones de software personalizadas para empresas de todos los tamaños. Nuestro equipo de expertos en desarrollo web y móvil trabaja en estrecha colaboración con nuestros clientes para crear soluciones innovadoras y efectivas que satisfagan sus necesidades específicas.",
+    "lang": "es",
     "charset": "UTF-8",
     "ldJson": {
       "@context": "http://schema.org",
       "@type": "Organization",
-      "name": "Luna Landing",
-      "description": "Fictitious company that seeks to elevate and simplify the lives of web developers.",
-      "url": "https://luna-landing-rust.vercel.app/",
+      "name": "Set Perú",
+      "description": " ",
+      "url": "https://setperu.com",
       "logo": "./public/favicon.svg",
       "contactPoint": {
         "@type": "ContactPoint",
@@ -17,16 +17,16 @@
         "contactType": "Client Service"
       },
       "sameAs": [
-        "https://www.twitter.com/yourpage",
-        "https://www.instagram.com/yourpage",
-        "https://www.linkedin.com/company/yourpage"
+        "https://www.twitter.com/setperu",
+        "https://www.instagram.com/setperu"
       ]
     }
   },
   "headerData": {
     "logo": "Set Perú",
     "links": [
-      { "label": "Services", "href": "#" },
+      { "label": "Servicios", "href": "#services" },
+      { "label": "Proyectos", "href": "#projects" },
       { "label": "Blog", "href": "https://blog.setperu.com" }
     ]
   },
@@ -82,8 +82,8 @@
     ]
   },
   "brandsData": {
-    "title": "Integration with Leading Technologies",
-    "description": "Effortlessly integrate with leading technologies. Our platform seamlessly supports industry-standard tools and frameworks, enabling you to stay ahead of the curve and maximize productivity. Explore endless possibilities with our comprehensive compatibility features",
+    "title": "Socios que Nos Acompañan",
+    "description": "Grandes marcas del Perú han formado parte de nuestro recorrido, creando juntos soluciones para el éxito empresarial.",
     "brands": [
       { "label": "React", "icon": "ReactIcon", "href": "https://react.dev/" },
       { "label": "Vue", "icon": "VueIcon", "href": "https://vuejs.org/" },

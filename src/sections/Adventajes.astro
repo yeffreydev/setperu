@@ -1,6 +1,10 @@
 ---
 import type { AdventajesData } from "@/config/landing.interface";
 
+import advantagesImg from "@/assets/advantages.png";
+import sellsImg from "@/assets/sells.webp";
+import AdventagesItem from "@/components/AdventagesItem.astro";
+
 interface Props {
   data: AdventajesData;
 }
@@ -8,25 +12,30 @@ interface Props {
 const { data } = Astro.props;
 ---
 
-<section class="bg-gray-100 py-16">
-  <div class="container mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-6">
-      Potencia tu negocio con nuestros sistemas
-    </h2>
-    <p class="mb-4">
-      Our intuitive customization options empower you to create a website that
-      stands out and resonates with...
-    </p>
-    <ul class="list-disc list-inside mb-6">
-      <li>Our intuitive customization</li>
-      <li>Our intuitive customization</li>
-    </ul>
-    <h2 class="text-3xl font-bold mb-6">Incrementa tus potenciales clientes</h2>
-    <p class="mb-4">Nuestras landing pages, etc.</p>
-    <ul class="list-disc list-inside">
-      <li>Our intuitive customization</li>
-      <li>Our intuitive customization</li>
-      <li>Our intuitive customization</li>
-    </ul>
+<section class="py-16">
+  <div class="container mx-auto px-4">
+    <AdventagesItem
+      imgSrc={advantagesImg.src}
+      direction="right"
+      title="Potencia tu negocio con nuestros sistemas"
+      description="Optimiza tus procesos, toma decisiones inteligentes y lleva tu empresa al siguiente nivel con soluciones tecnológicas diseñadas para crecer contigo."
+      list={[
+        "Automatización que ahorra tiempo y recursos",
+        "Datos en tiempo real para decisiones más acertadas",
+        "Escalabilidad adaptada al crecimiento de tu negocio",
+      ]}
+    />
+
+    <AdventagesItem
+      imgSrc={sellsImg.src}
+      direction="left"
+      title="Aumenta tus ventas cons nuestras soluciones"
+      description="Impulsa tus ingresos con herramientas inteligentes que mejoran la experiencia del cliente, optimizan tu proceso de venta y maximizan cada oportunidad de negocio."
+      list={[
+        "Integración con canales digitales para mayor alcance",
+        "Seguimiento efectivo de clientes potenciales",
+        "Reportes y métricas que revelan nuevas oportunidades",
+      ]}
+    />
   </div>
 </section>
